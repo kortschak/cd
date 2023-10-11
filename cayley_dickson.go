@@ -118,7 +118,7 @@ func Pow[A Value[A, F], F Field](x, r A) A {
 				return Lift[A](F(math.Inf(1)))
 			}
 			return Inf[A]()
-		case w < 0:
+		case w > 0:
 			return zero
 		}
 	}
